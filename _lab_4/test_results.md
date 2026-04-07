@@ -151,3 +151,75 @@ Hãy cho mình biết nhé!
 TravelBuddy đang suy nghĩ...
 
 > TravelBuddy: Xin lỗi, nhưng mình chỉ hỗ trợ các vấn đề liên quan đến du lịch như đặt phòng, vé máy bay hay lên kế hoạch du lịch. Nếu bạn cần thông tin hay hỗ trợ về du lịch, hãy cho mình biết nhé!
+
+---
+
+# Test 6 - Multi-turn Memory
+- User: "Tôi muốn đi Đà Nẵng"
+- Kỳ vọng: Agent phải hỏi lại
+
+> Bạn: tôi muốn đi Đà Nẵng 
+
+TravelBuddy đang suy nghĩ...
+
+> TravelBuddy: Chào bạn!
+
+Bạn có dự định đi Đà Nẵng vào thời gian nào? Bạn có ngân sách cụ thể và sở thích gì về hoạt động hay chỗ ở không? Như thế mình sẽ tìm được kế hoạch tốt nhất cho bạn!
+
+> Bạn: tôi đi vào tháng 7, budget 10 triệu cho 2 người, tôi thích du lịch biển. Xuất phát từ Hà Nội
+
+Gọi tool: search_flights({'origin': 'Hà Nội', 'destination': 'Đà Nẵng'})
+
+Gọi tool: search_hotels({'city': 'Đà Nẵng', 'max_price_per_night': 1500000})
+
+Gọi tool: calculate_budget({'total_budget': 10000000, 'expenses': 'vé_máy_bay:1780000,khách_sạn:3500000'})
+
+> TravelBuddy: Dưới đây là kế hoạch chi tiết cho chuyến đi Đà Nẵng của bạn:
+
+### 1. Vé máy bay:
+- **Vietnam Airlines**
+  - Giờ bay: 06:00 - 07:20
+  - Hạng: Economy
+  - **Giá: 1.450.000đ** (chuyến đi)
+- Hoặc bạn có thể chọn **VietJet Air**
+  - Giá: 890.000đ (chuyến đi)
+
+### 2. Khách sạn:
+Mình đã tìm được một số khách sạn phù hợp với ngân sách:
+- **Christina's Homestay** (2 sao) - An Thượng
+  - Giá: 350.000đ/đêm
+  - Rating: 4.7
+- **Sala Danang Beach** (4 sao) - Mỹ Khê
+  - Giá: 1.200.000đ/đêm
+  - Rating: 4.3
+
+### 3. Ngân sách tổng thể:
+- **Tổng chi phí:**
+  - Vé máy bay: 1.780.000đ (2 vé máy bay khứ hồi)
+  - Khách sạn (5 đêm ở Christina's Homestay): 3.500.000đ
+  - **Tổng chi: 5.280.000đ**
+
+### 4. Ngân sách còn lại:
+- **Ngân sách còn lại: 4.720.000đ**
+
+Với số tiền còn lại, bạn có thể thưởng thức các món ăn hải sản tươi ngon, tham gia các hoạt động vui chơi tại bãi biển, thuê xe máy để khám phá Đà Nẵng hoặc tận hưởng các dịch vụ khác.
+
+Bạn có muốn đặt vé máy bay hoặc khách sạn không? Hay cần thêm thông tin gì khác?
+
+---
+
+# Test 7 - Budget quá thấp
+- User: "Đi Phú Quốc 3 ngày 2 đêm với 1 triệu được không?"
+- Kỳ vọng: Không gọi tool ngay
+
+>Bạn: Đi Phú Quốc 3 ngày 2 đêm với 1 triệu được không?                                       
+
+TravelBuddy đang suy nghĩ...
+
+> TravelBuddy: Với ngân sách 1 triệu đồng cho chuyến đi Phú Quốc 3 ngày 2 đêm, bao gồm vé máy bay, khách sạn và ăn uống, thì khá khó khăn.
+
+Tổng chi phí cho vé máy bay và khách sạn đã rơi vào khoảng 1.500.000đ (vé máy bay khoảng 1.100.000đ và khách sạn 400.000đ). Chưa kể đến chi phí ăn uống và các hoạt động khác, ngân sách 1 triệu đồng sẽ không đủ.
+
+Nếu bạn có thể tăng thêm ngân sách hoặc chấp nhận giảm thời gian lưu trú, có thể cân nhắc thuê phòng ở một số nơi khác hoặc tìm kiếm vé máy bay rẻ hơn.
+
+Nếu bạn cần tư vấn thêm hoặc muốn tìm kiếm lựa chọn khác, hãy cho mình biết nhé!
