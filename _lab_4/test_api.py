@@ -11,7 +11,7 @@ github_token = os.getenv("GITHUB_TOKEN_4o_mini")
 if not github_token:
     raise ValueError("Lỗi: Chưa có GITHUB_TOKEN trong file .env")
 
-#khoi tao model langchain tro ve server cua github
+#khoi tao model langchain tra ve server cua github
 llm = ChatOpenAI(
     model="gpt-4o-mini",
     api_key=github_token, 
