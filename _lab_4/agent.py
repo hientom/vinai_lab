@@ -82,9 +82,9 @@ if __name__ == "__main__":
 
         print("\nTravelBuddy đang suy nghĩ...")
         
-        # chat_history.append(("human", user_input))
-        from langchain_core.messages import HumanMessage
-        chat_history.append(HumanMessage(content=user_input))
+        chat_history.append(("human", user_input))
+        # from langchain_core.messages import HumanMessage
+        # chat_history.append(HumanMessage(content=user_input))
         
         result = graph.invoke({"messages": chat_history})
         
