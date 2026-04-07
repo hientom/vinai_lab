@@ -131,7 +131,7 @@ def calculate_budget(total_budget: int, expenses: str) -> str:
     expense_dict = {}
     total_expenses = 0
     
-    # Xử lý format lỗi của chuỗi expenses
+    # Xử lý format lỗi của chuỗi expense
     try:
         if expenses.strip():
             items = expenses.split(',')
